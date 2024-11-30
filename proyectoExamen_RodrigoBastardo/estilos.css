@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&family=Parisienne&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&family=Parisienne&family=Satisfy&display=swap');
+
+*{
+    display: flexbox;
+}
+
+table {
+    width: 33%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid brown;
+    background-color: antiquewhite;
+  }
