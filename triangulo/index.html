@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculo del area de un triángulo</h1>
+    <button onclick="pideDatosTriangulo()">Área del triangulo (Pide datos)</button>
+    
+    <p id="display">
+
+    </p>
+    <p>
+        <label for="base">Base del triangulo</label>
+        <input type="number" name="base" id="base">
+    </p>
+    <p>
+        <label for="altura">Altura del triangulo</label>
+        <input type="number" name="altura" id="altura">
+    </p>
+    <button onclick="leeDatosTriangulo()">Área del triangulo (Pide datos)</button>
+    <h1>Calculo de la posición x en el momento MRUA</h1>
+    <p id="display2"></p>
+    <p>
+        <label for="aceleracion">aceleracion</label>
+        <input type="number" name="aceleracion" id="aceleracion">
+    </p>
+    <p>
+        <label for="tiempo">Tiempo:</label>
+        <input type="number" name="tiempo" id="tiempo">
+    </p>
+    <button onclick="leerDatosMRUA()">Calular MRUA</button>
+    <script>
+        function areaTringulo(base, altura){
+            return base*altura/2;
+        }
+
+        function pideDatosTriangulo(){
+            const base = prompt("Dime la base: ");
+            const altura = prompt("Dime la altura");
+            alert(areaTringulo(base, altura));
+        }
+
+        function leeDatosTriangulo(){
+            const base = document.getElementById('base').value;
+            const altura = document.getElementById('altura').value;
+            document.getElementById('display').innerHTML = '<h2>El área es ' + areaTringulo(base, altura) + '</h2>';
+        }
+
+        function mrua(a, t){
+            return a*Math.pow(t, 2)/2;
+        }
+
+        function leerDatosMRUA(){
+            const aceleracion = document.getElementById('aceleracion').value;
+            const tiempo = document.getElementById('tiempo').value;
+            document.getElementById('display2').innerHTML = '<h2>la posición de x es ' + mrua(aceleracion, tiempo) + '</h2>';
+        }
+
+    </script>
+</body>
+</html>
