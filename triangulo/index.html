@@ -55,7 +55,7 @@
 
         function leerDatosMRUA(){
             const aceleracion = document.getElementById('aceleracion').value;
-            const tiempo = document.getElementById('tiempo').value;
+            const tiempo = document.querySelector('#tiempo').value;
             document.getElementById('display2').innerHTML = '<h2>la posición de x es ' + mrua(aceleracion, tiempo) + '</h2>';
         }
 
